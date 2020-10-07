@@ -15,13 +15,16 @@ public class entrega1 {
 
         marco.setSize(500, 400);
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setLayout(new GridLayout(2,1));
+        marco.setLayout(new GridLayout(3,1));
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel3 = new JPanel();
+        panel3.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JButton file = new JButton("Selecciona un fichero o directorio");
         JFileChooser fc = new JFileChooser();
@@ -48,10 +51,16 @@ public class entrega1 {
         datos.addActionListener(e -> {
             datosarchivo.datos(archivo, fc);
         });
-        panel2.add(datos);
+        JButton contadores = new JButton("Contador de palabras y vocales");
+        contadores.addActionListener(e -> {
+            contapala.contar(archivo, fc);
+        });
 
+        panel2.add(datos);
+        panel3.add(contadores);
         marco.add(panel1);
         marco.add(panel2);
+        marco.add(panel3);
 
         marco.setVisible(true);
         marco.setResizable(false);
