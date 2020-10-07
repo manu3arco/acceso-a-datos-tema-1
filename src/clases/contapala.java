@@ -28,6 +28,9 @@ public class contapala {
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         marco.setLayout(new GridLayout(4,1));
 
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
 
@@ -49,8 +52,13 @@ public class contapala {
         contar_a.setEditable(false);
         panel3.add(letra_a);
         panel3.add(contar_a);
+        JFileChooser fc = new JFileChooser();
+        fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        fc.setCurrentDirectory(new File("C:\\Users\\dam2"));
+        fc.setPreferredSize(new Dimension(600, 300));
+        panel1.add(fc);
 
-        file.addActionListener(e -> {
+        fc.addActionListener(e -> {
             if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
 
                 try {
@@ -80,6 +88,7 @@ public class contapala {
                 }
             }
         });
+        marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
 
