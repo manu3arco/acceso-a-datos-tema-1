@@ -1,3 +1,5 @@
+package clases;
+
 public class entrega1 {
 
     public static void main (String [] args){
