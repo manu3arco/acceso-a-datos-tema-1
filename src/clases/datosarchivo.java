@@ -6,15 +6,15 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 
 public class datosarchivo {
-    public void datos() {
+    public static void datos(String s, JFileChooser fc) {
+
+        String cadena = s;
+        JFileChooser fileChooser = fc;
+
         JFrame marco = new JFrame();
 
         marco.setSize(500, 400);
-        marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setLayout(new GridLayout(6,1));
-
-        JPanel panel1 = new JPanel();
-        panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
+        marco.setLayout(new GridLayout(5,1));
 
         JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -30,14 +30,6 @@ public class datosarchivo {
 
         JPanel panel6 = new JPanel();
         panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
-
-
-        JButton file = new JButton("Selecciona un fichero o directorio");
-        JFileChooser fc = new JFileChooser();
-        fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-        fc.setCurrentDirectory(new File("C:\\Users\\dam2"));
-        fc.setPreferredSize(new Dimension(600, 300));
-        panel1.add(file);
 
         JLabel nombre = new JLabel("Nombre: ");
         JTextField texto1 = new JTextField();
@@ -74,26 +66,13 @@ public class datosarchivo {
         panel6.add(modificacion);
         panel6.add(texto5);
 
+        File f = new File(cadena);
+        texto1.setText(f.getName().replaceFirst("[.][^.]+$", ""));
+        texto2.setText(fileChooser.getTypeDescription(f));
+        texto3.setText(f.getAbsolutePath());
+        texto4.setText((double) s.length() /1000+" KB");
+        texto5.setText(new SimpleDateFormat("dd/MM/yyyy  hh:mm:ss").format(f.lastModified()));
 
-        file.addActionListener(e -> {
-            if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-
-                File f = new File(String.valueOf(fc.getSelectedFile()));
-                texto1.setText(f.getName().replaceFirst("[.][^.]+$", ""));
-                texto2.setText(fc.getTypeDescription(f));
-                texto3.setText(f.getAbsolutePath());
-                texto4.setText((double) f.length() /1000+" KB");
-                texto5.setText(new SimpleDateFormat("dd/MM/yyyy  hh:mm:ss").format(f.lastModified()));
-
-            }else{
-                JOptionPane.showMessageDialog(marco,"Ha ocurrido un error al abrir el archivo.",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE);
-            }
-        });
-
-
-        marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
         marco.add(panel4);
