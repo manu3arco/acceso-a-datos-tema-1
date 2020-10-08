@@ -70,7 +70,7 @@ public class datosarchivo {
         texto1.setText(f.getName().replaceFirst("[.][^.]+$", ""));
         texto2.setText(fileChooser.getTypeDescription(f));
         texto3.setText(f.getAbsolutePath());
-        texto4.setText((double) s.length() /1000+" KB");
+        texto4.setText((double) s.length() /1024+" KB");
         texto5.setText(new SimpleDateFormat("dd/MM/yyyy  hh:mm:ss").format(f.lastModified()));
 
         marco.add(panel1);
