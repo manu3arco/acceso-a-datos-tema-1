@@ -11,12 +11,6 @@ public class contapala {
 
         int contador_a = 0, contador_e = 0, contador_i = 0, contador_o = 0, contador_u = 0;
 
-        String cuenta_a = null;
-        String cuenta_e = null;
-        String cuenta_i = null;
-        String cuenta_o = null;
-        String cuenta_u = null;
-
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(6,1));
 
@@ -114,25 +108,26 @@ public class contapala {
                     String lineaa;
                     while ((lineaa = br1.readLine()) != null) {
                         for (int x = 0; x < lineaa.length(); x++) {
-                            if (lineaa.charAt(x) == 'a') {
+
+                            if ((lineaa.charAt(x) == 'a') || (lineaa.charAt(x) == 'A')) {
                                 contador_a++;
-                                cuenta_a = Integer.toString(contador_a);
+
                             }
-                            if (lineaa.charAt(x) == 'e') {
+
+                            if ((lineaa.charAt(x) == 'e') || (lineaa.charAt(x) == 'E')) {
                                 contador_e++;
-                                cuenta_e = Integer.toString(contador_e);
                             }
-                            if (lineaa.charAt(x) == 'i') {
+
+                            if ((lineaa.charAt(x) == 'i') || (lineaa.charAt(x) == 'I')) {
                                 contador_i++;
-                                cuenta_i = Integer.toString(contador_i);
                             }
-                            if (lineaa.charAt(x) == 'o') {
+
+                            if ((lineaa.charAt(x) == 'o') || (lineaa.charAt(x) == 'O')){
                                 contador_o++;
-                                cuenta_o = Integer.toString(contador_o);
                             }
-                            if (lineaa.charAt(x) == 'u') {
+
+                            if ((lineaa.charAt(x) == 'u') || (lineaa.charAt(x) == 'U')){
                                 contador_u++;
-                                cuenta_u = Integer.toString(contador_u);
                             }
                         }
                     }
@@ -142,11 +137,11 @@ public class contapala {
                     we.printStackTrace();
                 }
 
-        contar_a.setText(cuenta_a);
-        contar_e.setText(cuenta_e);
-        contar_i.setText(cuenta_i);
-        contar_o.setText(cuenta_o);
-        contar_u.setText(cuenta_u);
+        contar_a.setText(String.valueOf(contador_a));
+        contar_e.setText(String.valueOf(contador_e));
+        contar_i.setText(String.valueOf(contador_i));
+        contar_o.setText(String.valueOf(contador_o));
+        contar_u.setText(String.valueOf(contador_u));
 
         marco.add(panel1);
         marco.add(panel2);
