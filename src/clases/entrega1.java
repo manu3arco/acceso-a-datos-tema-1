@@ -15,7 +15,7 @@ public class entrega1 {
 
         marco.setSize(500, 400);
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setLayout(new GridLayout(3,1));
+        marco.setLayout(new GridLayout(4,1));
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -26,12 +26,18 @@ public class entrega1 {
         JPanel panel3 = new JPanel();
         panel3.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        JPanel panel4 = new JPanel();
+        panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         JButton file = new JButton("Selecciona un fichero o directorio");
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-        fc.setCurrentDirectory(new File("C:\\Users\\dam2"));
+        fc.setCurrentDirectory(new File("C:\\Users\\dam2\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
-        panel1.add(file);
+
+
+
+        /*---------------- DATOS DEL FICHERO ----------------*/
 
         file.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -51,16 +57,43 @@ public class entrega1 {
         datos.addActionListener(e -> {
             datosarchivo.datos(archivo, fc);
         });
+
+        /*---------------- DATOS DEL FICHERO ----------------*/
+
+
+
+
+        /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/
+
         JButton contadores = new JButton("Contador de palabras y vocales");
         contadores.addActionListener(e -> {
             contapala.contar(archivo, fc);
         });
 
+        /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/
+
+
+
+
+        /*---------------- EDITOR DE TEXTO ----------------*/
+
+        JButton editar = new JButton("Editor");
+        editar.addActionListener(e -> {
+            editorarchivo.editar(archivo);
+        });
+
+        /*---------------- EDITOR DE TEXTO ----------------*/
+
+
+        panel1.add(file);
         panel2.add(datos);
         panel3.add(contadores);
+        panel4.add(editar);
+
         marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
+        marco.add(panel4);
 
         marco.setVisible(true);
         marco.setResizable(false);

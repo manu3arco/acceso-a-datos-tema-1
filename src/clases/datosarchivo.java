@@ -16,6 +16,9 @@ public class datosarchivo {
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(5,1));
 
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
 
@@ -23,48 +26,45 @@ public class datosarchivo {
         panel3.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JPanel panel4 = new JPanel();
-        panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
+        panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JPanel panel5 = new JPanel();
         panel3.setLayout(new FlowLayout(FlowLayout.CENTER));
-
-        JPanel panel6 = new JPanel();
-        panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JLabel nombre = new JLabel("Nombre: ");
         JTextField texto1 = new JTextField();
         texto1.setPreferredSize( new Dimension( 300, 24 ) );
         texto1.setEditable(false);
-        panel2.add(nombre);
-        panel2.add(texto1);
+        panel1.add(nombre);
+        panel1.add(texto1);
 
         JLabel formato = new JLabel("Formato: ");
         JTextField texto2 = new JTextField();
         texto2.setPreferredSize( new Dimension( 300, 24 ) );
         texto2.setEditable(false);
-        panel3.add(formato);
-        panel3.add(texto2);
+        panel2.add(formato);
+        panel2.add(texto2);
 
         JLabel ruta = new JLabel("Ruta: ");
         JTextField texto3 = new JTextField();
         texto3.setPreferredSize( new Dimension( 300, 24 ) );
         texto3.setEditable(false);
-        panel4.add(ruta);
-        panel4.add(texto3);
+        panel3.add(ruta);
+        panel3.add(texto3);
 
         JLabel tamaño = new JLabel("Tamaño: ");
         JTextField texto4 = new JTextField();
         texto4.setPreferredSize( new Dimension( 300, 24 ) );
         texto4.setEditable(false);
-        panel5.add(tamaño);
-        panel5.add(texto4);
+        panel4.add(tamaño);
+        panel4.add(texto4);
 
         JLabel modificacion = new JLabel("Última modificación: ");
         JTextField texto5 = new JTextField();
         texto5.setPreferredSize( new Dimension( 300, 24 ) );
         texto5.setEditable(false);
-        panel6.add(modificacion);
-        panel6.add(texto5);
+        panel5.add(modificacion);
+        panel5.add(texto5);
 
         File f = new File(cadena);
         texto1.setText(f.getName().replaceFirst("[.][^.]+$", ""));
@@ -73,11 +73,11 @@ public class datosarchivo {
         texto4.setText((double) s.length() /1000+" KB");
         texto5.setText(new SimpleDateFormat("dd/MM/yyyy  hh:mm:ss").format(f.lastModified()));
 
+        marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
         marco.add(panel4);
         marco.add(panel5);
-        marco.add(panel6);
 
         marco.setVisible(true);
         marco.setResizable(false);
