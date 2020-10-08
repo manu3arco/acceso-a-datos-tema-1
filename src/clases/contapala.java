@@ -14,7 +14,6 @@ public class contapala {
         char  cont_a ='a';
 
         marco.setSize(500, 400);
-        marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         marco.setLayout(new GridLayout(2,1));
 
 
@@ -56,9 +55,9 @@ public class contapala {
                                     if (linea.charAt(i) != ' ')
                                         a++;
 
-                                for ( i = 0; i < linea.length(); i++) {
+                               /* for ( i = 0; i < linea.length(); i++) {
                                         contador_a++;
-                                    }
+                                    }*/
                             }
                         }
                     }
