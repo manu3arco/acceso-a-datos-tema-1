@@ -15,7 +15,7 @@ public class entrega1 {
 
         marco.setSize(500, 400);
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setLayout(new GridLayout(4,1));
+        marco.setLayout(new GridLayout(5,1));
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -29,12 +29,17 @@ public class entrega1 {
         JPanel panel4 = new JPanel();
         panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        JPanel panel5 = new JPanel();
+        panel5.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         JButton file = new JButton("Selecciona un fichero o directorio");
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         fc.setCurrentDirectory(new File("C:\\Users\\dam2\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
 
+
+        //==========================================================================
 
 
         /*---------------- DATOS DEL FICHERO ----------------*/
@@ -61,6 +66,7 @@ public class entrega1 {
         /*---------------- DATOS DEL FICHERO ----------------*/
 
 
+        //==========================================================================
 
 
         /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/
@@ -73,6 +79,7 @@ public class entrega1 {
         /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/
 
 
+        //==========================================================================
 
 
         /*---------------- EDITOR DE TEXTO ----------------*/
@@ -85,15 +92,27 @@ public class entrega1 {
         /*---------------- EDITOR DE TEXTO ----------------*/
 
 
+        //==========================================================================
+
+
+        JButton copiar = new JButton("Copiar archivo");
+        copiar.addActionListener(e -> {
+            copiarchi.copiar(archivo);
+        });
+
+
+        //==========================================================================
         panel1.add(file);
         panel2.add(datos);
         panel3.add(contadores);
         panel4.add(editar);
+        panel5.add(copiar);
 
         marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
         marco.add(panel4);
+        marco.add(panel5);
 
         marco.setVisible(true);
         marco.setResizable(false);
