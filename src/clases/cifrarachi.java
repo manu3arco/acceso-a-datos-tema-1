@@ -3,6 +3,7 @@ package clases;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class cifrarachi {
@@ -37,22 +38,24 @@ public class cifrarachi {
             File fiche = new File(archivos2);
             fiche.getAbsolutePath();
             String nomarchiv = archivos.replaceFirst("[.][^.]+$", "");
+
+
             FileReader Ficheroentrada = new FileReader(archivos2);
             BufferedReader entrada = new BufferedReader(Ficheroentrada);
             FileWriter Ficherosalida = new FileWriter(nomarchiv + "_CIFRADO.txt");
             BufferedWriter salida = new BufferedWriter(Ficherosalida);
-            Scanner escaner = new Scanner(Ficheroentrada);String cadena = entrada.readLine();
+
+            Scanner escaner = new Scanner(Ficheroentrada);
+            String cadena = entrada.readLine();
+
             while (cadena != null) {
-                System.out.println(cadena);
-                salida.write("Adios");
+
                 salida.newLine();
                 cadena = entrada.readLine();
-
             }
 
             escaner.close();
             salida.close();
-            salida.flush();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
 

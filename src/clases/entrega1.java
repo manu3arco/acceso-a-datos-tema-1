@@ -35,17 +35,11 @@ public class entrega1 {
         JPanel panel6 = new JPanel();
         panel6.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-        JButton file = new JButton("Selecciona un fichero o directorio");
+        JButton file = new JButton("Selecciona un fichero");
         JFileChooser fc = new JFileChooser();
-        fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
         fc.setCurrentDirectory(new File("C:\\Users\\dam2\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
-
-
-        //==========================================================================
-
-
-
 
 
         //==========================================================================
@@ -108,6 +102,7 @@ public class entrega1 {
                 if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
 
                     archivo = String.valueOf(fc.getSelectedFile());
+                    file.setText("Seleccionar otro fichero");
                     marco.add(panel2);
                     marco.add(panel3);
                     marco.add(panel4);
