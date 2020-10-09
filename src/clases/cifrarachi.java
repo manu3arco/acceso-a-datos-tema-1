@@ -47,9 +47,19 @@ public class cifrarachi {
 
             Scanner escaner = new Scanner(Ficheroentrada);
             String cadena = entrada.readLine();
-
             while (cadena != null) {
 
+                String [] array=cadena.split(" ");
+                String invertido="";
+                String invertido2="";
+                for(int i=0;i<=array.length-1; i++){
+                    invertido=array[i]+" ";
+                    for (int x=invertido.length()-1;x>=0;x--){
+                        invertido2 = invertido2 + invertido.charAt(x);
+                    }
+
+                }
+                salida.write(invertido2);
                 salida.newLine();
                 cadena = entrada.readLine();
             }
