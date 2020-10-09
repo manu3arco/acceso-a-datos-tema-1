@@ -42,28 +42,7 @@ public class entrega1 {
         //==========================================================================
 
 
-        /*---------------- DATOS DEL FICHERO ----------------*/
 
-        file.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
-
-                    archivo = String.valueOf(fc.getSelectedFile());
-
-                }else{
-                    JOptionPane.showMessageDialog(marco,"Ha ocurrido un error al abrir el archivo.",
-                            "Error",
-                            JOptionPane.ERROR_MESSAGE);
-                }
-            }
-        });
-
-        JButton datos = new JButton("Ver los datos del archivo seleccionado");
-        datos.addActionListener(e -> {
-            datosarchivo.datos(archivo, fc);
-        });
-
-        /*---------------- DATOS DEL FICHERO ----------------*/
 
 
         //==========================================================================
@@ -100,8 +79,10 @@ public class entrega1 {
             copiarchi.copiar(archivo);
         });
 
-
         //==========================================================================
+
+        JButton datos = new JButton("Ver los datos del archivo seleccionado");
+
         panel1.add(file);
         panel2.add(datos);
         panel3.add(contadores);
@@ -109,10 +90,35 @@ public class entrega1 {
         panel5.add(copiar);
 
         marco.add(panel1);
-        marco.add(panel2);
-        marco.add(panel3);
-        marco.add(panel4);
-        marco.add(panel5);
+
+        /*---------------- DATOS DEL FICHERO ----------------*/
+
+        file.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+
+                    archivo = String.valueOf(fc.getSelectedFile());
+                    marco.add(panel2);
+                    marco.add(panel3);
+                    marco.add(panel4);
+                    marco.add(panel5);
+
+                    marco.revalidate();
+
+                }else{
+                    JOptionPane.showMessageDialog(marco,"Ha ocurrido un error al abrir el archivo.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        datos.addActionListener(e -> {
+            datosarchivo.datos(archivo, fc);
+        });
+
+        /*---------------- DATOS DEL FICHERO ----------------*/
+
 
         marco.setVisible(true);
         marco.setResizable(false);
