@@ -58,7 +58,7 @@ public class entrega1 {
 
         JButton contadores = new JButton("Contador de palabras y vocales");
         contadores.addActionListener(e -> {
-            contapala.contar(fc);
+            contapala.contar(archivo);
         });
 
         /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/
@@ -157,10 +157,6 @@ public class entrega1 {
 
                     marco.revalidate();
             }
-        });
-
-        datos.addActionListener(e -> {
-            datosarchivo.datos(archivo, fc);
         });
 
         /*---------------- CREAR FICHERO ----------------*/

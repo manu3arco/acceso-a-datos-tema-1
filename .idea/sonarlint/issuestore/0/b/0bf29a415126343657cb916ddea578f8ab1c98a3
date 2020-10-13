@@ -1,0 +1,31 @@
+
+B
+java:S1602a",Remove useless curly braces around statement(¯®ô²
+d
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ıŸŞ¶øÿÿÿÿ
+\
+java:S10750"ARefactor your code to get this URI from a customizable parameter.(ƒü§Îÿÿÿÿÿ
+n
+java:S1104"SMake archivo a static final constant or non-public and provide accessors if needed.(³Æ—’ûÿÿÿÿ
+>
+java:S1604t"(Make this anonymous inner class a lambda(³¥ßû
+g	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(”šÓùÿÿÿÿ
+?
+java:S1604”"(Make this anonymous inner class a lambda(Ê Á¾
+H
+java:S1444"-Make this "public static archivo" field final(³Æ—’ûÿÿÿÿ
+G
+java:S1602V",Remove useless curly braces around statement(ÅûŒøÿÿÿÿ
+i
+java:S1104"NMake fc a static final constant or non-public and provide accessors if needed.(ìô›æøÿÿÿÿ
+C
+java:S1444"(Make this "public static fc" field final(ìô›æøÿÿÿÿ
+B
+java:S1602¢",Remove useless curly braces around statement(ÀŞ
+G
+java:S1602<",Remove useless curly braces around statement(ºÎ¢üşÿÿÿÿ
+B
+java:S1602I",Remove useless curly braces around statement(è£«à
+B
+java:S1602Š",Remove useless curly braces around statement(ÀŞ

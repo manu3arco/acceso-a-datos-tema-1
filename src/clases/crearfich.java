@@ -5,6 +5,9 @@ import java.awt.*;
 import java.io.*;
 
 public class crearfich {
+
+    public static JFileChooser fc1;
+
     public static void creadorfich(){
 
         JFrame marco = new JFrame();
@@ -36,7 +39,7 @@ public class crearfich {
         panel3.add(new JLabel("Ruta de destino: "));
         panel3.add(texto2);
 
-        JFileChooser fc1 = new JFileChooser();
+        fc1 = new JFileChooser();
         JButton directorio = new JButton("Selecciona directorio");
         fc1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         fc1.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
@@ -45,8 +48,6 @@ public class crearfich {
             if (fc1.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
 
                 texto2.setText(fc1.getSelectedFile().getAbsolutePath());
-                entrega1.fc = fc1;
-
 
             }else {
                 JOptionPane.showMessageDialog(marco, "Ha ocurrido un error al seleccionar el directorio.",
@@ -64,8 +65,7 @@ public class crearfich {
         crear.addActionListener(e -> {
             try {
                 entrega1.archivo = fc1.getSelectedFile().getAbsolutePath()+"\\"+texto1.getText()+".txt";
-                File f = new File(entrega1.archivo);
-                f.createNewFile();
+                new File(entrega1.archivo).createNewFile();
                 JOptionPane.showMessageDialog(marco,"Se ha creado el fichero con éxito.",
                         "Info",
                         JOptionPane.INFORMATION_MESSAGE);

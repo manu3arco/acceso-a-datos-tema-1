@@ -60,10 +60,8 @@ public class cifrarachi {
                         }
                         String invertido3 = invertido2.substring(invertido2.length()-1)+invertido2.substring(1,invertido2.length()-1)+invertido2.substring(0,1);
                         salida.write(invertido3+" ");
-                        System.out.println(invertido3+" ");
                     }else {
                         salida.write(invertido+" ");
-                        System.out.println(invertido+" ");
                     }
                 }
                 salida.newLine();
