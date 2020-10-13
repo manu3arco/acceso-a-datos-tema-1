@@ -1,6 +1,7 @@
 package clases;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,6 +38,8 @@ public class entrega1 {
 
         JButton file = new JButton("Selecciona un fichero");
         JFileChooser fc = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
+        fc.setFileFilter(filter);
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
         fc.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
