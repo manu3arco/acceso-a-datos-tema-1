@@ -38,7 +38,7 @@ public class entrega1 {
         JButton file = new JButton("Selecciona un fichero");
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-        fc.setCurrentDirectory(new File("C:\\Users\\dam2\\Desktop"));
+        fc.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
 
 

@@ -49,7 +49,7 @@ public class copiarchi {
         JButton file = new JButton("Seleccionar directorio de destino");
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fc.setCurrentDirectory(new File("C:\\Users\\dam2"));
+        fc.setCurrentDirectory(new File("C:\\Users\\usuario"));
         fc.setPreferredSize(new Dimension(600, 300));
         panel3.add(file);
 
