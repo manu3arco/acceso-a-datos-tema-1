@@ -48,9 +48,7 @@ public class entrega1 {
         fc.setPreferredSize(new Dimension(600, 300));
 
         JButton crear = new JButton("Crear fichero");
-        crear.addActionListener(e -> {
-            crearfich.creadorfich(archivo);
-        });
+
 
         //==========================================================================
 
@@ -81,10 +79,15 @@ public class entrega1 {
         //==========================================================================
 
 
+        /*---------------- COPIA ARCHIVO ----------------*/
+
         JButton copiar = new JButton("Copiar archivo");
         copiar.addActionListener(e -> {
             copiarchi.copiar(archivo);
         });
+
+        /*---------------- COPIA ARCHIVO ----------------*/
+
 
         //==========================================================================
 
@@ -107,7 +110,7 @@ public class entrega1 {
         marco.add(panel1);
         marco.add(panel7);
 
-        /*---------------- DATOS DEL FICHERO ----------------*/
+        /*---------------- SELECCIONAR FICHERO ----------------*/
 
         file.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -135,7 +138,31 @@ public class entrega1 {
             datosarchivo.datos(archivo, fc);
         });
 
-        /*---------------- DATOS DEL FICHERO ----------------*/
+        /*---------------- SELECCIONAR FICHERO ----------------*/
+
+        //==============================================================
+
+        /*---------------- CREAR FICHERO ----------------*/
+
+        crear.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                    crearfich.creadorfich();
+                    crear.setText("Crear otro fichero");
+                    marco.add(panel2);
+                    marco.add(panel3);
+                    marco.add(panel4);
+                    marco.add(panel5);
+                    marco.add(panel6);
+
+                    marco.revalidate();
+            }
+        });
+
+        datos.addActionListener(e -> {
+            datosarchivo.datos(archivo, fc);
+        });
+
+        /*---------------- CREAR FICHERO ----------------*/
 
 
         marco.setVisible(true);

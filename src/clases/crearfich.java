@@ -5,8 +5,7 @@ import java.awt.*;
 import java.io.*;
 
 public class crearfich {
-    public static void creadorfich(String s){
-        String archivo = s;
+    public static void creadorfich(){
 
         JFrame marco = new JFrame();
 
@@ -40,7 +39,7 @@ public class crearfich {
         JFileChooser fc = new JFileChooser();
         JButton directorio = new JButton("Selecciona directorio");
         fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fc.setCurrentDirectory(new File("C:\\Users\\dam2\\Desktop"));
+        fc.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
         directorio.addActionListener(e -> {
             if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
