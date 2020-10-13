@@ -16,7 +16,7 @@ public class entrega1 {
 
         marco.setSize(500, 400);
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        marco.setLayout(new GridLayout(6,1));
+        marco.setLayout(new GridLayout(7,1));
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -36,6 +36,9 @@ public class entrega1 {
         JPanel panel6 = new JPanel();
         panel6.setLayout(new FlowLayout(FlowLayout.CENTER));
 
+        JPanel panel7 = new JPanel();
+        panel7.setLayout(new FlowLayout(FlowLayout.CENTER));
+
         JButton file = new JButton("Selecciona un fichero");
         JFileChooser fc = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
@@ -44,6 +47,10 @@ public class entrega1 {
         fc.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
         fc.setPreferredSize(new Dimension(600, 300));
 
+        JButton crear = new JButton("Crear fichero");
+        crear.addActionListener(e -> {
+            crearfich.creadorfich(archivo);
+        });
 
         //==========================================================================
 
@@ -95,8 +102,10 @@ public class entrega1 {
         panel4.add(editar);
         panel5.add(copiar);
         panel6.add(cifradores);
+        panel7.add(crear);
 
         marco.add(panel1);
+        marco.add(panel7);
 
         /*---------------- DATOS DEL FICHERO ----------------*/
 
