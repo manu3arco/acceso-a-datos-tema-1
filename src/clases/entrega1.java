@@ -9,7 +9,8 @@ import java.io.File;
 
 public class entrega1 {
 
-    private static String archivo;
+    public static String archivo;
+    public static JFileChooser fc;
 
     public static void main (String [] args){
         JFrame marco = new JFrame();
@@ -40,7 +41,7 @@ public class entrega1 {
         panel7.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JButton file = new JButton("Selecciona un fichero");
-        JFileChooser fc = new JFileChooser();
+        fc = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES", "txt", "text");
         fc.setFileFilter(filter);
         fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
@@ -57,7 +58,7 @@ public class entrega1 {
 
         JButton contadores = new JButton("Contador de palabras y vocales");
         contadores.addActionListener(e -> {
-            contapala.contar(archivo, fc);
+            contapala.contar(fc);
         });
 
         /*---------------- CONTADOR PALABRAS Y VOCALES ----------------*/

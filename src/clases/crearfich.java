@@ -36,15 +36,16 @@ public class crearfich {
         panel3.add(new JLabel("Ruta de destino: "));
         panel3.add(texto2);
 
-        JFileChooser fc = new JFileChooser();
+        JFileChooser fc1 = new JFileChooser();
         JButton directorio = new JButton("Selecciona directorio");
-        fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fc.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
-        fc.setPreferredSize(new Dimension(600, 300));
+        fc1.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        fc1.setCurrentDirectory(new File("C:\\Users\\usuario\\Desktop"));
+        fc1.setPreferredSize(new Dimension(600, 300));
         directorio.addActionListener(e -> {
-            if (fc.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+            if (fc1.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
 
-                texto2.setText(fc.getSelectedFile().getAbsolutePath());
+                texto2.setText(fc1.getSelectedFile().getAbsolutePath());
+                entrega1.fc = fc1;
 
 
             }else {
@@ -62,8 +63,8 @@ public class crearfich {
         JButton crear = new JButton("Crear fichero");
         crear.addActionListener(e -> {
             try {
-                String rutades = fc.getSelectedFile().getAbsolutePath()+"\\"+texto1.getText()+".txt";
-                File f = new File(rutades);
+                entrega1.archivo = fc1.getSelectedFile().getAbsolutePath()+"\\"+texto1.getText()+".txt";
+                File f = new File(entrega1.archivo);
                 f.createNewFile();
                 JOptionPane.showMessageDialog(marco,"Se ha creado el fichero con éxito.",
                         "Info",

@@ -6,7 +6,7 @@ import java.io.*;
 
 public class contapala {
 
-    public static void contar(String archivo, JFileChooser fc) {
+    public static void contar(JFileChooser fc) {
         JFrame marco = new JFrame();
 
         int contador_a = 0, contador_e = 0, contador_i = 0, contador_o = 0, contador_u = 0;
@@ -81,7 +81,7 @@ public class contapala {
                     String linea;
                     FileReader fr = new FileReader(f);
                     BufferedReader br = new BufferedReader(fr);
-                    int i, j, a = 0;
+                    int i, a = 0;
                     while ((linea = br.readLine()) != null) {
                         for (i = 0; i < linea.length(); i++) {
                             if (i == 0) {
