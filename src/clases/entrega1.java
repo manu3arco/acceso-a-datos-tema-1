@@ -103,9 +103,9 @@ public class entrega1 {
 
         panel1.add(file);
         panel2.add(datos);
-        panel3.add(contadores);
-        panel4.add(editar);
-        panel5.add(copiar);
+        panel3.add(editar);
+        panel4.add(copiar);
+        panel5.add(contadores);
         panel6.add(cifradores);
         panel7.add(crear);
 
