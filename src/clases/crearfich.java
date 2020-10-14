@@ -12,8 +12,8 @@ public class crearfich {
 
         JFrame marco = new JFrame("CREAR FICHERO");
 
-        marco.setSize(500, 400);
-        marco.setLayout(new GridLayout(4,1));
+        marco.setSize(700, 500);
+        marco.setLayout(new GridLayout(5,1));
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -26,6 +26,15 @@ public class crearfich {
 
         JPanel panel4 = new JPanel();
         panel4.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel5 = new JPanel();
+        panel5.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel6 = new JPanel();
+        panel6.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        JPanel panel7 = new JPanel();
+        panel6.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JLabel nombre = new JLabel("Nombre del archivo: ");
         JTextField texto1 = new JTextField();
@@ -58,14 +67,25 @@ public class crearfich {
         panel2.add(directorio);
 
 
+        JTextArea texto = new JTextArea(3, 50);
+        JScrollPane scroll = new JScrollPane(texto);
+        panel4.add(new JLabel("Texto a introducir en el fichero:"));
+        panel5.add(scroll);
 
-
+        panel6.add(panel4);
+        panel6.add(panel5);
 
         JButton crear = new JButton("Crear fichero");
         crear.addActionListener(e -> {
             try {
                 entrega1.archivo = fc1.getSelectedFile().getAbsolutePath()+"\\"+texto1.getText()+".txt";
-                new File(entrega1.archivo).createNewFile();
+                FileWriter escritor = new FileWriter(entrega1.archivo);
+                BufferedWriter salida = new BufferedWriter(escritor);
+
+                salida.write(texto.getText());
+                texto.setText(null);
+
+                salida.close();
                 JOptionPane.showMessageDialog(marco,"Se ha creado el fichero con éxito.",
                         "Info",
                         JOptionPane.INFORMATION_MESSAGE);
@@ -75,12 +95,13 @@ public class crearfich {
                 System.err.println("¡Hubo un error de E/S!");
             }
         });
-        panel4.add(crear);
+        panel7.add(crear);
 
         marco.add(panel1);
         marco.add(panel2);
         marco.add(panel3);
-        marco.add(panel4);
+        marco.add(panel6);
+        marco.add(panel7);
 
         marco.setVisible(true);
         marco.setResizable(false);

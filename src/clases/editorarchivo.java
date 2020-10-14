@@ -11,7 +11,7 @@ public class editorarchivo {
 
         JFrame  marco = new JFrame("EDITOR FICHERO");
 
-        marco.setSize(800, 700);
+        marco.setSize(800, 600);
         marco.setLayout(new GridLayout(2,1));
 
         JPanel panel1 = new JPanel();
@@ -20,8 +20,9 @@ public class editorarchivo {
         JPanel panel2 = new JPanel();
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-        JTextArea texto = new JTextArea(100, 50);
-        panel1.add(texto);
+        JTextArea texto = new JTextArea(17, 50);
+        JScrollPane scroll = new JScrollPane(texto);
+        panel1.add(scroll);
 
         JButton get = new JButton("Obtener texto");
         panel2.add(get);

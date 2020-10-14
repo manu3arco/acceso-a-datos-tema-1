@@ -1,37 +1,37 @@
 
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İåç
+k	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¤Èêÿÿÿÿÿ
+f	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…éÀ÷
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
+f	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ä®¥
+J
+java:S1066\"/Merge this if statement with the enclosing one.(¨Ï­¼ıÿÿÿÿ
+b
+java:S2095S"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´ÓñÊ
+k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÔŸ¿øÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
+:
+java:S1659T"Declare "a" on a separate line.(¿í²Äÿÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(İåç
+f	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û®±à
+k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›äŒĞıÿÿÿÿ
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã»Àüÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
+h
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 47 to the 15 allowed.(“úçÎ
+>
+java:S1659"(Declare "contador_e" on a separate line.(Şºñ
+>
+java:S1659"(Declare "contador_o" on a separate line.(Şºñ
+g
+java:S2095k"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(íÆõÚşÿÿÿÿ
+k	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ë› şÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
+>
+java:S1659"(Declare "contador_u" on a separate line.(Şºñ
+k	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹‰¾‹ÿÿÿÿÿ
+k	java:S117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¡¡©üÿÿÿÿ
 >
 java:S1659"(Declare "contador_i" on a separate line.(Şºñ
 f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
-f	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û®±à
-f	java:S117H"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…éÀ÷
-P
-java:S1118":Add a private constructor to hide the implicit public one.(İåç
-g
-java:S2095k"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(íÆõÚşÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
-k	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹‰¾‹ÿÿÿÿÿ
-k	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€Ë› şÿÿÿÿ
-k	java:S117B"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¡¡©üÿÿÿÿ
-k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÔŸ¿øÿÿÿÿ
-f	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ä®¥
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(İåç
->
-java:S1659"(Declare "contador_e" on a separate line.(Şºñ
-:
-java:S1659T"Declare "a" on a separate line.(¿í²Äÿÿÿÿÿ
-J
-java:S1066\"/Merge this if statement with the enclosing one.(¨Ï­¼ıÿÿÿÿ
-k	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¤Èêÿÿÿÿÿ
-k	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›äŒĞıÿÿÿÿ
-b
-java:S2095S"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(´ÓñÊ
->
-java:S1659"(Declare "contador_u" on a separate line.(Şºñ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
->
-java:S1659"(Declare "contador_o" on a separate line.(Şºñ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şºñ
-k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã»Àüÿÿÿÿ
-m
-java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 47 to the 15 allowed.(ª”Éşüÿÿÿÿ

@@ -9,3 +9,5 @@ I
 src/clases/crearfich.java,c\1\c134941825366fade40c63dbb4e8bb02fdac19dd
 L
 src/clases/datosarchivo.java,1\8\189f59d34361cf842cfd6cea2c904148b66f6dfd
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

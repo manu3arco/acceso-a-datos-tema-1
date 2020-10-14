@@ -94,10 +94,20 @@ public class entrega1 {
         //==========================================================================
 
 
+        /*---------------- CIIFRADO ARCHIVO ----------------*/
+
         JButton cifradores = new JButton("Cifrar archivo");
         cifradores.addActionListener(e -> {
             cifrarachi.cifrador(archivo);
+            JOptionPane.showMessageDialog(marco,"Se ha cifrado el fichero con éxito.",
+                    "Info",
+                    JOptionPane.INFORMATION_MESSAGE);
         });
+
+        /*---------------- CIIFRADO ARCHIVO ----------------*/
+
+
+        //==========================================================================
 
         JButton datos = new JButton("Ver los datos del archivo seleccionado");
 
