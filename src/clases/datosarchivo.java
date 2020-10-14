@@ -11,7 +11,7 @@ public class datosarchivo {
         String cadena = s;
         JFileChooser fileChooser = fc;
 
-        JFrame marco = new JFrame();
+        JFrame  marco = new JFrame("DATOS FICHERO");
 
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(5,1));

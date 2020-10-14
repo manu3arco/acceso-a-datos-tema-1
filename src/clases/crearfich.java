@@ -10,7 +10,7 @@ public class crearfich {
 
     public static void creadorfich(){
 
-        JFrame marco = new JFrame();
+        JFrame marco = new JFrame("CREAR FICHERO");
 
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(4,1));

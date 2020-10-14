@@ -7,7 +7,8 @@ import java.io.*;
 public class contapala {
 
     public static void contar(String fc) {
-        JFrame marco = new JFrame();
+
+        JFrame  marco = new JFrame("CONTAR PALABRAS Y VOCALES DEL FICHERO");
 
         int contador_a = 0, contador_e = 0, contador_i = 0, contador_o = 0, contador_u = 0;
 

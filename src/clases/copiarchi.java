@@ -1,6 +1,7 @@
 package clases;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.io.*;
 
@@ -9,7 +10,7 @@ public class copiarchi {
 
         String archivo = s;
 
-        JFrame marco = new JFrame();
+        JFrame  marco = new JFrame("COPIAR FICHERO");
 
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(6,1));
@@ -67,7 +68,6 @@ public class copiarchi {
         texto4.setPreferredSize( new Dimension( 200, 24 ));
         panel5.add(new JLabel("Nuevo nombre del fichero: "));
         panel5.add(texto4);
-
         JButton añadir = new JButton("Copiar fichero");
         panel6.add(añadir);
 
@@ -86,28 +86,54 @@ public class copiarchi {
 
         añadir.addActionListener(e -> {
             try {
-                FileReader lector = new FileReader(f.getAbsolutePath());
-                BufferedReader entrada = new BufferedReader(lector);
-                FileWriter escritor = new FileWriter(fc.getSelectedFile().getAbsolutePath()+"\\"+texto4.getText()+".txt");
-                BufferedWriter salida = new BufferedWriter(escritor);
+                String texto = texto4.getText();
 
-                String cadena = entrada.readLine();
+                if((texto.length() == 0) || (texto == " ")){
+                    FileReader lector = new FileReader(f.getAbsolutePath());
+                    BufferedReader entrada = new BufferedReader(lector);
+                    FileWriter escritor = new FileWriter(fc.getSelectedFile().getAbsolutePath() + "\\" + texto1.getText());
+                    BufferedWriter salida = new BufferedWriter(escritor);
 
-                while (cadena != null) {
-                    salida.write(cadena);
-                    salida.newLine();
-                    cadena = entrada.readLine();
+                    String cadena = entrada.readLine();
+
+                    while (cadena != null) {
+                        salida.write(cadena);
+                        salida.newLine();
+                        cadena = entrada.readLine();
+                    }
+
+                    entrada.close();
+                    salida.close();
+
+                    JOptionPane.showMessageDialog(marco, "Se ha copiado el fichero con éxito.",
+                            "Info",
+                            JOptionPane.INFORMATION_MESSAGE);
+
+                    salida.close();
+
+                }else {
+                    FileReader lector = new FileReader(f.getAbsolutePath());
+                    BufferedReader entrada = new BufferedReader(lector);
+                    FileWriter escritor = new FileWriter(fc.getSelectedFile().getAbsolutePath() + "\\" + texto4.getText() + ".txt");
+                    BufferedWriter salida = new BufferedWriter(escritor);
+
+                    String cadena = entrada.readLine();
+
+                    while (cadena != null) {
+                        salida.write(cadena);
+                        salida.newLine();
+                        cadena = entrada.readLine();
+                    }
+
+                    entrada.close();
+                    salida.close();
+
+                    JOptionPane.showMessageDialog(marco, "Se ha copiado el fichero con éxito.",
+                            "Info",
+                            JOptionPane.INFORMATION_MESSAGE);
+
+                    salida.close();
                 }
-
-                entrada.close();
-                salida.close();
-
-                JOptionPane.showMessageDialog(marco,"Se ha copiado el fichero con éxito.",
-                        "Info",
-                        JOptionPane.INFORMATION_MESSAGE);
-
-                salida.close();
-
             } catch (IOException ioe) {
                 System.err.println("¡Hubo un error de E/S!");
             }

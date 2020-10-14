@@ -13,7 +13,8 @@ public class entrega1 {
     public static JFileChooser fc;
 
     public static void main (String [] args){
-        JFrame marco = new JFrame();
+
+        JFrame  marco = new JFrame("EJERCICIO FICHEROS");
 
         marco.setSize(500, 400);
         marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -9,7 +9,8 @@ import java.util.Scanner;
 public class cifrarachi {
     public static void cifrador(String s){
         String archivos = s;
-        JFrame marco = new JFrame();
+
+        JFrame  marco = new JFrame("CIFRAR FICHERO");
 
         marco.setSize(500, 400);
         marco.setLayout(new GridLayout(2,1));

@@ -9,7 +9,7 @@ public class editorarchivo {
 
         File f = new File(s);
 
-        JFrame marco = new JFrame();
+        JFrame  marco = new JFrame("EDITOR FICHERO");
 
         marco.setSize(800, 700);
         marco.setLayout(new GridLayout(2,1));
